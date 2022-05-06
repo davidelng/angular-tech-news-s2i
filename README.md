@@ -37,7 +37,7 @@ Il deploy è stato effettuato su Firebase.
 
 ## Link
 
-[Link per provare l'app](https://s2i-jobsearchapp.web.app/)
+[Link per provare l'app](https://s2i-technewsapp.web.app/)
 
 ## Istruzioni per provare l'app in locale
 

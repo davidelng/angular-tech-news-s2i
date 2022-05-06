@@ -1,0 +1,12 @@
+.page-wrapper { 
+    max-width: 50rem;
+    margin: 64px auto 1rem; 
+    flex: 1; 
+    word-break: break-word; 
+}
+
+@media (max-width: 600px) { 
+    .page-wrapper { 
+        margin-top: 56px; 
+    }
+}

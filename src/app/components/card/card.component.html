@@ -1,0 +1,11 @@
+<mat-card [ngClass]="'mat-elevation-z0'">
+  <mat-card-title>{{ newsInfo.title }}</mat-card-title>
+  <mat-card-subtitle>Submitted on: {{ formattedNewsTime }}</mat-card-subtitle>
+  <mat-card-actions>
+    <button mat-button>
+      <a target="_blank" href="{{ newsInfo.url }}">Read More</a>
+      <!-- <mat-icon>arrow_forward</mat-icon> -->
+      <mat-icon>trending_flat</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

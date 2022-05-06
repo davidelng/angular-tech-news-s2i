@@ -1,0 +1,28 @@
+<ng-container *ngIf="!loading">
+  <h2 class="latestTitle">Latest selected news:</h2>
+  <ng-container *ngFor="let article of loadedNews">
+    <app-card [newsInfo]="article"></app-card>
+  </ng-container>
+
+  <h3>Not enough? There's more!</h3>
+  <button
+    mat-flat-button
+    color="accent"
+    class="load-more-btn"
+    (click)="loadMore()"
+  >
+    Load More
+  </button>
+
+  <button
+    mat-fab
+    color="accent"
+    class="to-the-top"
+    [ngClass]="{ hidden: !windowScrolled }"
+    (click)="scrollToTop()"
+  >
+    <mat-icon>arrow_upward</mat-icon>
+  </button>
+</ng-container>
+
+<mat-spinner color="accent" *ngIf="loading"></mat-spinner>

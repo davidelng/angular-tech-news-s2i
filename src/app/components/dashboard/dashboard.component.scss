@@ -1,0 +1,39 @@
+.to-the-top {
+    color: white;
+    position: fixed;
+    bottom: 38px;
+    right: 16px;
+    transition: all .3s ease;
+    transform: translateX(0%)
+}
+
+.to-the-top.hidden {
+    transform: translateX(200%);
+}
+
+h3 {
+    margin: 3rem 1rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: #777;
+    text-align: center;
+}
+
+.load-more-btn { 
+    margin: 3rem auto 1rem !important; 
+    display: block !important; 
+    width:10rem; 
+    height: 3rem; 
+    color:white !important; 
+    text-transform: uppercase; 
+    border-radius: 50px !important; 
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+}
+
+.latestTitle { 
+    padding: 0 1rem; 
+    margin: 0 0 2rem 0 !important; 
+    font-size: 2rem !important; 
+    font-weight: 300 !important; 
+    color: #777 !important; 
+}

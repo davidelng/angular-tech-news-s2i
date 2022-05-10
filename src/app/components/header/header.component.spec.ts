@@ -16,10 +16,17 @@ describe('HeaderComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
+    const expectedTitle = "Tech News";
+    component.title = expectedTitle;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render the title', () => {
+    const title = document.querySelector('#app-title');
+    expect(title?.innerHTML).toEqual('Tech News');
   });
 });

@@ -4,11 +4,9 @@
 
 Questo progetto sviluppato in Angular permette di visualizzare le ultime news pubblicate su [Hacker News](https://news.ycombinator.com/).
 
-Al caricamento iniziale, l'app effettua una chiamata api per ottenere circa 500 id sulle ultime pubblicazioni. Di questi ne vengono selezionati i primi dieci e, con una successiva chiamata, vengono mostrati a schermo titolo, data di pubblicazione e un link che permette di visionare l'articolo originale.
+Al caricamento iniziale, l'app effettua due chiamate api: con una ottiene degli ID sulle ultime notizie e una seconda ritorna le informazioni dei primi dieci, mostrando il tutto a schermo. Un bottone posto in fondo alla pagina permette poi di effettuare una nuova chiamata per gli articoli successivi, sempre in gruppo da dieci.
 
-Un bottone posto in fondo alla pagina permette poi di effettuare una nuova chiamata per gli id successivi, sempre in gruppo da dieci, in modo da caricare altri articoli. Inoltre, dato che la lista può diventare lunga, un bottone "scroll to top" si manifesta una volta effettuato lo scrolling per permettere all'utente di tornare velocemente in cima.
-
-Esteticamente l'app segue il Material Design di Google e, nello specifico, fa uso di Angular Material da cui prende le componenti per l'interfaccia utente. Totalmente responsive, il design è stato pensato per essere fruito principalmente da mobile.
+Esteticamente l'app segue il Material Design di Google ed è stata pensata per essere fruita principalmente da mobile. Ho aggiunto un bottone "scroll to top" poiché la lista può diventare lunga.
 
 ## Metodologie di sviluppo
 
@@ -24,6 +22,10 @@ Al termine del ciclo di vita del componente "dashboard", che alla creazione si s
 
 Il deploy è stato effettuato su Firebase.
 
+## Link
+
+[Link per provare l'app](https://s2i-technewsapp.web.app/)
+
 ### Costruito con
 
 - Angular
@@ -34,10 +36,6 @@ Il deploy è stato effettuato su Firebase.
 
 ![Dashboard](src/assets/screenshots/app-desktop-top.png)
 ![Body](src/assets/screenshots/app-desktop-mid.png)
-
-## Link
-
-[Link per provare l'app](https://s2i-technewsapp.web.app/)
 
 ## Istruzioni per provare l'app in locale
 

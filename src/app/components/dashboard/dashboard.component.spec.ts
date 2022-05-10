@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NewsService } from 'src/app/services/news.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
@@ -8,9 +9,18 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ DashboardComponent ],
+      providers: [
+        NewsService
+      ]
     })
-    .compileComponents();
+    .compileComponents()
+    .then(() => {
+        fixture = TestBed.createComponent(DashboardComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
   });
 
   beforeEach(() => {

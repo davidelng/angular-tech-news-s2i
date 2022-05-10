@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/services/news.service';
 import { News } from 'src/app/interfaces/News';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -44,8 +44,10 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.idSubscription.unsubscribe();
-    this.newsSubscription.unsubscribe();
+    if (this.idSubscription && this.newsSubscription) {
+      this.idSubscription.unsubscribe();
+      this.newsSubscription.unsubscribe();
+    }
   }
 
   filterNewsIDs() {

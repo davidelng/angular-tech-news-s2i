@@ -22,4 +22,9 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have links', () => {
+    const links = document.querySelectorAll('.footer-links');
+    expect(links).toBeTruthy();
+  });
 });

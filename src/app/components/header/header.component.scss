@@ -33,10 +33,15 @@ height: auto;
 .banner { 
     height: 28rem; 
     padding: 2rem; 
-    color: white; 
-    background-color: #212121; 
     display: flex; 
     align-items: center;
+    color: white; 
+    background-color: #212121; 
+    background-image: url(../../../assets/hero-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: color-dodge;
 
     h2 {
         line-height: 1.3; 

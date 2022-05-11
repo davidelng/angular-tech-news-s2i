@@ -8,6 +8,10 @@ Al caricamento iniziale, l'app effettua due chiamate api: con una ottiene degli 
 
 Esteticamente l'app segue il Material Design di Google ed è stata pensata per essere fruita principalmente da mobile. Ho aggiunto un bottone "scroll to top" poiché la lista può diventare lunga.
 
+### Link
+
+[Clicca qui per provare l'app](https://s2i-technewsapp.web.app/)
+
 ## Metodologie di sviluppo
 
 Sotto src/app troviamo **components**, **interfaces** e **services**.
@@ -22,15 +26,11 @@ Al termine del ciclo di vita del componente "dashboard", che alla creazione si s
 
 Il deploy è stato effettuato su Firebase.
 
-## Link
-
-[Link per provare l'app](https://s2i-technewsapp.web.app/)
-
 ### Costruito con
 
-- Angular
-- Material Design
-- Firebase
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [Firebase](https://firebase.google.com/)
 
 ### Screenshots
 

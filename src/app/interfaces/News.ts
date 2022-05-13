@@ -4,4 +4,8 @@ export interface News {
     by: string,
     title: string,
     time: number,
+    text?: string
+    type: string,
+    score: number
+    descendants: number
 }

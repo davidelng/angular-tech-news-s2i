@@ -14,7 +14,13 @@ export class CardComponent implements OnInit {
     by: '',
     title: '',
     time: 0,
+    text: '',
+    type: '',
+    score: 0,
+    descendants: 0
   }
+
+  visibility: boolean = false;
 
   formattedNewsTime!: string;
 

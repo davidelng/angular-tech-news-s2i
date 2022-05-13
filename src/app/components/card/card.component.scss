@@ -1,0 +1,33 @@
+.contentOpen {
+    display: block;
+}
+
+.contentClosed {
+    display: none;
+}
+
+.newsContent {
+    font-weight: 200;
+}
+
+.newsUrl {
+    margin: 1rem 1rem 1rem 0;
+    font-weight: 400;
+    border-radius: 50px;
+    color:white !important; 
+}
+
+.readMoreBtn {
+    padding: 0;
+}
+
+mat-card-content ul {
+    list-style: none;
+    font-weight: 300;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+mat-card-actions {
+    display: flex;
+}

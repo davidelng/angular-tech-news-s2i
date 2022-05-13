@@ -1,11 +1,36 @@
 <mat-card [ngClass]="'mat-elevation-z0'">
   <mat-card-title>{{ newsInfo.title }}</mat-card-title>
   <mat-card-subtitle>Submitted on: {{ formattedNewsTime }}</mat-card-subtitle>
+  <mat-card-content [ngClass]="visibility ? 'contentOpen' : 'contentClosed'">
+    <ul>
+      <li>Submitted by: {{ newsInfo.by }}</li>
+      <li>Type: {{ newsInfo.type }}</li>
+      <li>Score: {{ newsInfo.score }}</li>
+      <li>Descendants: {{ newsInfo.descendants }}</li>
+    </ul>
+    <div
+      class="newsContent"
+      [innerHTML]="
+        newsInfo.text
+          ? newsInfo.text
+          : 'Text unavailable, click below to read the full article!'
+      "
+    ></div>
+  </mat-card-content>
   <mat-card-actions>
-    <button mat-button>
-      <a target="_blank" href="{{ newsInfo.url }}">Read More</a>
-      <!-- <mat-icon>arrow_forward</mat-icon> -->
-      <mat-icon>trending_flat</mat-icon>
+    <button
+      mat-flat-button
+      color="accent"
+      class="newsUrl"
+      [ngClass]="visibility && newsInfo.url ? 'contentOpen' : 'contentClosed'"
+    >
+      <a target="_blank" href="{{ newsInfo.url }}">Read the article</a>
     </button>
+    <button
+      mat-button
+      class="readMoreBtn"
+      [innerText]="visibility ? 'Show less' : 'Show more'"
+      (click)="visibility = !visibility"
+    ></button>
   </mat-card-actions>
 </mat-card>

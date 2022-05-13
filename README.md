@@ -18,7 +18,7 @@ Sotto src/app troviamo **components**, **interfaces** e **services**.
 
 I componenti si preoccupano di generare l'interfaccia e alcuni si scambiano dati attraverso i decorator @Input().
 
-L'interfaccia _News_ viene utilizzata per ottenere correttamente i dati asincroni delle notizie.
+L'interfaccia _News_ viene utilizzata per ottenere correttamente i dati asincroni delle notizie. Alcuni sono mostrati subito, mentre i dettagli vengono mostrati solo con un apposito bottone. Se è disponibile un corpo di testo, questo viene mostrato, in alternativa compare un bottone che rimanda al link dell'articolo.
 
 In ultimo, il servizio _News Service_ si preoccupa delle chiamate api. Questo fa uso degli Observable messi a disposizione da Angular. Un primo Observable ritorna semplicemente un array di ID, mentre un secondo si preoccupa di raccogliere le info relative agli ID ottenuti e di ritornare il tutto seguendo le spefiche dell'interfaccia. Come loro, tutte le variabili dell'app sono state tipizzate per evitare errori.
 

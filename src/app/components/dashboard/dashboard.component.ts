@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   private allIDs = [];
   private filteredIDs = []; 
 
-  private currentNewsCount:number = 0;
+  private currentNewsCount: number = 0;
 
   public loadedNews: News[] = [];
 
@@ -58,8 +58,8 @@ export class DashboardComponent implements OnInit {
   }
 
   getNews() {
-    for (let id of this.filteredIDs) {
-      this.newsSubscription = this._fetch.getNewsInfo(id)
+      for (let i = this.currentNewsCount - 10; i < this.filteredIDs.length; i++ ) {
+      this.newsSubscription = this._fetch.getNewsInfo(this.filteredIDs[i])
         .subscribe(res => this.loadedNews.push(res));
     }
   }
